@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+
+        <img src="4e6d7b3b2ee34218a1b5d3d5574a09ab__4_-removebg-preview.png">
+
+        
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li> <a href="about.html">About us</a></li>
+            <li> <a href="curtains.html">Curtains</a></li>
+            <li> <a href="blinds.html">Blinds</a></li>
+            <li> <a href="contact.html">Contact us</a></li>
+            <li> <a href="book.html">Book an appointment</a></li>
+        </ul>
+    </nav>
+    
+    <!-- carousel -->
+    <div class="carousel">
+        <!-- list item -->
+        <div class="list">
+            <div class="item">
+                <img src="pexels-heyho-7060823.jpg">
+                <div class="content">
+
+                    <div class="title">Curtains & Blinds </div>
+                    <div class="topic">Expert</div>
+                    <div class="des">
+                        <!-- description -->
+                        Curtains and Blinds Expert is a premier provider of custom window treatments, specializing in high-quality curtains and blinds tailored to meet your unique style and functional needs.                    </div>
+                        <div class="buttons">
+                            <a href="curtains.html">
+                                <button>SEE MORE</button>
+                            </a>
+                            <a href="book.html">
+                                <button>BOOK AN APPOINTMENT</button>
+                            </a>
+                        </div>
+                        
+                        
+                </div>
+            </div>
+            <div class="item">
+                <img src="pexels-heyho-7005297.jpg">
+                <div class="content">
+
+                    <div class="title">Tailored </div>
+                    <div class="topic">Curtains</div>
+                    <div class="des">
+                        We offer a wide selection of materials, colors, and designs to enhance any interior space, providing expert advice and professional installation services to ensure a perfect fit and finish.                     </div>
+                        <div class="buttons">
+                            <a href="curtains.html">
+                                <button>SEE MORE</button>
+                            </a>
+                            <a href="book.html">
+                                <button>BOOK AN APPOINTMENT</button>
+                            </a>
+                        </div>
+                        
+                </div>
+            </div>
+            <div class="item">
+                <img src="decorative-flowers-vase.jpg">
+                <div class="content">
+
+                    <div class="title">Roller</div>
+                    <div class="topic">Blinds</div>
+                    <div class="des">
+                        Our roller blinds offer a sleek and versatile window treatment solution, perfect for any modern interior. Available in a variety of fabrics, colors, and patterns, they provide excellent light control and privacy.                    </div>
+                        <div class="buttons">
+                            <a href="curtains.html">
+                                <button>SEE MORE</button>
+                            </a>
+                            <a href="book.html">
+                                <button>BOOK AN APPOINTMENT</button>
+                            </a>
+                        </div>
+                        
+                </div>
+            </div>
+            <div class="item">
+                <img src="wl15-1708500763-ihgZL.jpg">
+                <div class="content">
+
+                    <div class="title">Customized</div>
+                    <div class="topic">Wallpaper</div>
+                    <div class="des">
+                        Our customized wallpaper service allows you to transform any room with unique, high-quality designs tailored to your style. Choose from a wide array of patterns, images, and colors, or create your own design for a truly personalized look.                     </div>
+                        <div class="buttons">
+                            <a href="curtains.html">
+                                <button>SEE MORE</button>
+                            </a>
+                            <a href="book.html">
+                                <button>BOOK AN APPOINTMENT</button>
+                            </a>
+                        </div>
+                        
+                </div>
+            </div>
+        </div>
+
+        <!-- list thumnail -->
+        <div class="thumbnail">
+            <div class="item">
+                <img src="pexels-heyho-7060823.jpg">
+                <div class="content">
+                    <div class="title">
+                        Curtains Expert
+                    </div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="pexels-heyho-7005297.jpg">
+                <div class="content">
+                    <div class="title">
+                        Luxury Curtains
+                    </div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="decorative-flowers-vase.jpg">
+                <div class="content">
+                    <div class="title">
+                        Roller Blinds
+                    </div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="wl15-1708500763-ihgZL.jpg">
+                <div class="content">
+                    <div class="title">
+                        Wallpaper
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="arrows">
+            <button id="prev">&lt;</button>
+            <button id="next">&gt;</button>
+        </div>
+    </div>
+
+<script>
+    let nextDom = document.getElementById('next');
+    let prevDom = document.getElementById('prev');
+    
+    let carouselDom = document.querySelector('.carousel');
+    let SliderDom = carouselDom.querySelector('.carousel .list');
+    let thumbnailBorderDom = document.querySelector('.carousel .thumbnail');
+    let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.item');
+    let timeDom = document.querySelector('.carousel .time');
+    
+    thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
+    let timeRunning = 3000;
+    let timeAutoNext = 7000;
+    
+    nextDom.onclick = function(){
+        showSlider('next');    
+    }
+    
+    prevDom.onclick = function(){
+        showSlider('prev');    
+    }
+    let runTimeOut;
+    let runNextAuto = setTimeout(() => {
+        next.click();
+    }, timeAutoNext)
+    function showSlider(type){
+        let  SliderItemsDom = SliderDom.querySelectorAll('.carousel .list .item');
+        let thumbnailItemsDom = document.querySelectorAll('.carousel .thumbnail .item');
+        
+        if(type === 'next'){
+            SliderDom.appendChild(SliderItemsDom[0]);
+            thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
+            carouselDom.classList.add('next');
+        }else{
+            SliderDom.prepend(SliderItemsDom[SliderItemsDom.length - 1]);
+            thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
+            carouselDom.classList.add('prev');
+        }
+        clearTimeout(runTimeOut);
+        runTimeOut = setTimeout(() => {
+            carouselDom.classList.remove('next');
+            carouselDom.classList.remove('prev');
+        }, timeRunning);
+    
+        clearTimeout(runNextAuto);
+        runNextAuto = setTimeout(() => {
+            next.click();
+        }, timeAutoNext)
+    }
+
+</script>
+    
+    
+        <!-- Time Running -->
+        <div class="time"></div>
+    </div>
+    
+    
+    <!-- Section: What We Offer -->
+    <div class="heading">
+        <h1>What We Offer</h1>
+    </div>
+    <div class="card-container">
+        <div class="card">
+            <img src="pexels-heyho-7005297.jpg">
+            <div class="card-content">
+                <h1>Bespoke Curtains</h1>
+                <p>
+                    Curtains that we  offer are luxurious and personalized 
+                    window treatment solution, crafted to meet your specific 
+                    design preferences and needs. Choose from an 
+                    extensive selection of high-quality fabrics.
+                </p>
+                <a href="curtains.html" class="card-button">Read more</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="minimalistic ro 3050a050-af3f-4d53-be33-3f3d51936870.png">
+            <div class="card-content">
+                <h1>Blinds</h1>
+                <p>
+                    
+                 Our custom blinds provide a perfect blend of style and 
+                 functionality, custom-made to suit your specific requirements. 
+                 Available in a wide variety of materials, in various designs such as romans, roller etc.
+                </p>
+                <a href="blinds.html" class="card-button">Read more</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="shutterstock_1929872735-scaled.jpg">
+            <div class="card-content">
+                <h1>Sofa Upholstery</h1>
+                <p>
+                    Our sofa upholstery services offer a seamless way to rejuvenate
+                    and customize your furniture. Choose from a wide range of 
+                    high-quality fabrics, textures, and colors to match your interior
+                    style perfectly.  
+                </p>
+                <a href="index.html" class="card-button">Read more</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="sec aboutus">
+                <h2>About Us</h2>
+                <p>
+                    At Curtains and Blinds Expert, we specialize in providing high-quality, 
+                    customized window treatments and upholstery solutions. We offer a wide 
+                    range of products including bespoke curtains, tailored blinds, custom wallpaper, 
+                    and expert sofa upholstery. 
+                </p>
+                <ul class="sci">
+                    <li><a href="https://www.facebook.com/curtainsnblindsexpert"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="https://x.com/curtains_hub"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.instagram.com/curtainsnblindsexpert/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="https://youtube.com/@curtainsnblindsexpert?si=11ZBBTEBhxl7dA1T"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Terms & conditions</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Info</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                        <span>Dubai Business Bay <br> Ontario Tower</span>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <p><a href="tel:+971 50 676 1470">+971 50 676 1470</a><br>
+                           <a href="tel:+971 54 326 2748">+971 54 326 2748</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        <p><a href="mailto:info@curtainsnblindsexpert.com">info@curtainsnblindsexpert.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/971506761470" class="floating-whatsapp-button">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal().reveal('.heading', { 
+            delay: 200, 
+            distance: '50px', 
+            origin: 'bottom',
+            duration: 1000,
+        });
+        
+        ScrollReveal().reveal('.card', { 
+            delay: 200, 
+            distance: '50px', 
+            origin: 'bottom',
+            duration: 1000,
+            interval: 200
+        });
+        
+        ScrollReveal().reveal('.carousel .item', { 
+            delay: 200, 
+            distance: '50px', 
+            origin: 'bottom',
+            duration: 1000,
+            interval: 200
+        });
+
+        ScrollReveal().reveal('.sec', { 
+            delay: 200, 
+            distance: '50px', 
+            origin: 'bottom',
+            duration: 1000,
+            interval: 200
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

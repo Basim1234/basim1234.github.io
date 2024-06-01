@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="book.css">
+    <title>Book an Appointment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMAREbL7p8EmeGVHwp2pG6qB7x1c/LOsmNvi+um" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="background-image">
+
+    <nav>
+        <img src="4e6d7b3b2ee34218a1b5d3d5574a09ab__4_-removebg-preview.png" alt="Logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="curtains.html">Curtains</a></li>
+            <li><a href="blinds.html">Blinds</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a class="active" href="book.html">Book an appointment</a></li>
+        </ul>
+    </nav>
+
+    <div class="main_bg">
+        <div class="form">
+            <div class="form-text">
+                <h1>Book a Free Visit</h1>
+                <p>Get Your Dream Curtains Now</p>
+            </div>
+            <div class="main-form">
+                <form action="index.php" method="get">
+                    <div class="form-group">
+                        <label for="name">Your full name</label>
+                        <input type="text" name="name" id="name" placeholder="Write your name here..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your email address</label>
+                        <input type="email" name="email" id="email" placeholder="Write your email here..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="number">Your phone number</label>
+                        <input type="tel" name="number" id="number" placeholder="Write your number here..." required>
+                    </div>
+                    <form action="index.html" method="get">
+                        <div class="submit-btn">
+                            <input type="submit" value="SUBMIT">
+                        </div>
+                    </form>
+                    
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="sec aboutus">
+                <h2>About Us</h2>
+                <p>                    At Curtains and Blinds Expert, we specialize in providing high-quality, 
+                    customized window treatments and upholstery solutions. We offer a wide 
+                    range of products including bespoke curtains, tailored blinds, custom wallpaper, 
+                    and expert sofa upholstery.</p>
+                <ul class="sci">
+                    <li><a href="https://www.facebook.com/curtainsnblindsexpert"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="https://x.com/curtains_hub"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.instagram.com/curtainsnblindsexpert/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="https://youtube.com/@curtainsnblindsexpert?si=11ZBBTEBhxl7dA1T"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Terms & conditions</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Info</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fas fa-map-marker-alt"></i></span>
+                        <span>Dubai Business Bay <br> Ontario Tower</span>
+                    </li>
+                    <li>
+                        <span><i class="fas fa-phone"></i></span>
+                        <p><a href="tel:+971 50 676 1470">+971 50 676 1470</a><br>
+                            <a href="tel:+971 54 326 2748">+971 54 326 2748</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fas fa-envelope"></i></span>
+                        <p><a href="mailto:info@curtainsnblindsexpert.com">info@curtainsnblindsexpert.com</a></p>                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn">⬆️</button>
+
+    <!-- JavaScript for Scroll to Top Button -->
+    <script>
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        scrollToTopBtn.onclick = function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+
+    <script src="book.js"></script>
+
+</body>
+
+</html>

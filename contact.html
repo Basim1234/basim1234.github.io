@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    
+    <nav>
+
+        <img src="4e6d7b3b2ee34218a1b5d3d5574a09ab__4_-removebg-preview.png">
+
+        
+        <ul>
+            <li> <a  href="index.html">Home</a></li>
+            <li> <a href="about.html">About us</a></li>
+            <li> <a href="curtains.html">Curtains</a></li>
+            <li> <a href="blinds.html">Blinds</a></li>
+            <li> <a class="active" href="contact.html">Contact us</a></li>
+            <li> <a href="book.html">Book an appointment</a></li>
+        </ul>
+    </nav>
+
+    <div class="background-image">
+
+    <div class="contact-from">
+        <div class="form-area">
+            <div class="animated fadeInDown">
+                <h2>Contact Us</h2>
+                <p>Book A Free Visit Now! </p>
+            </div>
+            
+            <div class="contact">
+                <div class="map animated fadeInLeft">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d231118.51098883452!2d55.130392186718765!3d25.161820900000016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f61a749095517%3A0xa1e58e45a0d75ac3!2sCurtains%20n%20Blind%20Expert!5e0!3m2!1sen!2sae!4v1716305150027!5m2!1sen!2sae"></iframe>
+                </div>
+
+                <form class="form animated fadeInUp">
+                    <label>
+                        <input type="email" class="email" id="email" required>
+                        <div class="label email-text">E-mail</div>
+                    </label>
+
+                    <label>
+                        <input type="text" class="subject" id="subject" required>
+                        <div class="label subject-text">Subject</div>
+                    </label>
+
+                    <label>
+                        <textarea class="help-box" id="helpBox" cols="30" rows="10" required></textarea>
+                        <div class="label help-text">How we can help?</div>
+                    </label>
+
+                    <div class="submit-area">
+                        <input type="submit" id="submit" value="Submit">
+                        <i class="far fa-paper-plane"></i>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <footer>
+        <div class="container">
+            <div class="sec aboutus">
+                <h2>About Us</h2>
+                <p>
+                    At Curtains and Blinds Expert, we specialize in providing high-quality, 
+                    customized window treatments and upholstery solutions. We offer a wide 
+                    range of products including bespoke curtains, tailored blinds, custom wallpaper, 
+                    and expert sofa upholstery.
+                </p>
+
+                
+            </div>
+            <div class="sec quicklinks">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Terms & conditions</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Info</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                        <span>Dubai Business Bay <br> Ontario Tower</span>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <p><a href="tel:+971 50 676 1470">+971 50 676 1470</a><br>
+                            <a href="tel:+971 54 326 2748">+971 54 326 2748</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        <p><a href="mailto:info@curtainsnblindsexpert.com">info@curtainsnblindsexpert.com</a></p>                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn">⬆️</button>
+    
+    <!-- JavaScript for Scroll to Top Button -->
+    <script>
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    
+    window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollToTopBtn.style.display = "block";
+    } else {
+    scrollToTopBtn.style.display = "none";
+    }
+    };
+    
+    scrollToTopBtn.onclick = function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    </script>
+
+    <script src="contact.js"></script>
+</body>
+</html>
